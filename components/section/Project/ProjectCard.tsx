@@ -11,7 +11,7 @@ function calculateHeight(width: number) {
   return `${(9 * width) / 16}px`;
 }
 const ProjectCard = ({ initial, animate }: IProjectCardProps) => {
-  const iFrameRef = useRef();
+  const iFrameRef = useRef(null);
   console.log("calculateHeight(200)", calculateHeight(200), iFrameRef?.current);
   return (
     <motion.div

@@ -9,11 +9,14 @@ export const navLinks = [
     endpoint: "/project",
   },
   {
+    url:""
+  },
+  {
     label: "Blogs",
     endpoint: "/blogs",
   },
   {
-    label: "contact",
+    label: "Contact",
     endpoint: "/contact",
   },
 ];

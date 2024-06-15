@@ -1,3 +1,7 @@
-import Navbar from "./Navbar";
+import HomeSection from "./section/Home";
+import ProjectSection from "./section/Project";
 
-export { Navbar };
+import Navbar from "./shared/Navbar";
+import Title from "./shared/Title";
+
+export { Navbar, Title, HomeSection, ProjectSection };

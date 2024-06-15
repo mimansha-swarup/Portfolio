@@ -2,6 +2,7 @@
   background: color-mix(in srgb, var(--primary-100) 10%, transparent);
   border-radius: 10px;
   border: 1px solid var(--primary-200);
+  width: max-content;
 }
 
 .title-underline {
@@ -14,4 +15,12 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   letter-spacing: 9.5%;
+}
+.light-ball {
+  border-radius: 20rem;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    var(--primary-200) 0%,
+    var(--primary-100) 100%
+  );
 }

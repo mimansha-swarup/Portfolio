@@ -12,6 +12,8 @@
     #b7ab98 50%,
     color-mix(in srgb, var(--primary-100) 0%, transparent) 100%
   );
+  background-clip: text;
+  text-fill-color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   letter-spacing: 9.5%;

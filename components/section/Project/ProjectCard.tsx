@@ -18,15 +18,11 @@ const ProjectCard = ({ initial, animate }: IProjectCardProps) => {
       initial={{ y: initial }}
       animate={{ y: animate }}
       transition={{ duration: 1 }}
-      style={{
-        height: "800px",
-        flex: "1",
-        border: "1px solid red",
-      }}
+      className="mb-5 p-2"
     >
       <div className="flex-col flex">
-        <h2 className="p-0 pb-1">Title</h2>
-        <p>
+        <h2 className="p-0 pb-1 text-[2rem]">Title</h2>
+        <p className="pb-3 text-[1rem] text-gray-500">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis at
           voluptate magnam aut, officia delectus consequatur temporibus sit
           accusantium dolores corrupti dignissimos. In quia quisquam voluptates

@@ -1,5 +1,5 @@
 .navtab-wrapper {
-  background: color-mix(in srgb, var(--primary-100) 10%, transparent);
+  background: color-mix(in srgb, var(--primary-200) 10%, transparent);
   border-radius: 10px;
   border: 1px solid var(--primary-200);
   width: max-content;

@@ -5,6 +5,7 @@
 * {
   --primary-100: theme(colors.primary.100);
   --primary-200: theme(colors.primary.200);
+  --dark-500: theme(colors.dark.500);
 }
 
 :root {

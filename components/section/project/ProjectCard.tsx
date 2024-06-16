@@ -21,20 +21,20 @@ const ProjectCard = ({ initial, animate }: IProjectCardProps) => {
       className="mb-5 p-2"
     >
       <div className="flex-col flex">
-        <h2 className="p-0 pb-1 text-[2rem]">Title</h2>
-        <p className="pb-3 text-[1rem] text-gray-500">
+        <div className="w-full" ref={iFrameRef}>
+          <iframe
+            src="https://dhindhora.netlify.app/login"
+            className="w-full"
+            height={calculateHeight(890)}
+          ></iframe>
+        </div>
+        <h2 className="p-0 pb-1 text-[1.75rem]  sm:text-[2rem]">Title</h2>
+        <p className="pb-3 text-[.75rem] sm:text-[1rem] text-gray-500">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis at
           voluptate magnam aut, officia delectus consequatur temporibus sit
           accusantium dolores corrupti dignissimos. In quia quisquam voluptates
           impedit. Cupiditate, accusamus similique!
         </p>
-      </div>
-      <div className="w-full" ref={iFrameRef}>
-        <iframe
-          src="https://dhindhora.netlify.app/login"
-          className="w-full"
-          height={calculateHeight(890)}
-        ></iframe>
       </div>
     </motion.div>
   );

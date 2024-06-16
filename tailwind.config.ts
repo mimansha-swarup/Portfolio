@@ -8,6 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        "blog-card-gradient":
+          "radial-gradient(120% 100% at 20% 0%, transparent 50%, #968c7e)",
+      },
 
       colors: {
         primary: {

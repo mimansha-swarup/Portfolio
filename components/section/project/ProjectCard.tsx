@@ -1,9 +1,7 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import { motion, useScroll } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { calculateNewHeight, generateRandomNumber } from "@/utils";
-import Image from "next/image";
-import path from "path";
 
 interface IProjectCardProps {
   initial: number;
@@ -16,6 +14,8 @@ const ProjectCard = ({ initial, animate }: IProjectCardProps) => {
     target: ref,
     offset: ["0 1", "1.33 1"],
   });
+
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
 
   useEffect(() => {
     if (ref?.current?.offsetWidth)
@@ -32,7 +32,7 @@ const ProjectCard = ({ initial, animate }: IProjectCardProps) => {
         ref={ref}
         className="relative w-full object-contain mx-auto   max-w-[75%] p-4 rounded-lg"
         style={{
-          scale: scrollYProgress,
+          scale: scaleProgress,
           opacity: scrollYProgress,
           background: "url(/assets/a.png)",
           height,

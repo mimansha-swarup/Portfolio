@@ -3,7 +3,7 @@ import Title from "@/components/shared/Title";
 import React from "react";
 import Card from "./card";
 import HorizontalScrollCarousel from "@/components/shared/ScrollableCarosule";
-import { blogList } from "@/utils";
+import { blogList } from "@/constants/blogList";
 
 const Blogs = () => {
   return (

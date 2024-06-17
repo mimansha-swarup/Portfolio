@@ -2,6 +2,7 @@ import React from "react";
 import Title from "../../shared/Title";
 import CardWrapper from "./CardWrapper";
 import LightBall from "@/components/shared/Light";
+import "../../style.css";
 
 const ProjectSection = () => {
   return (

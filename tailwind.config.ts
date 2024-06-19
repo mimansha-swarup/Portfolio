@@ -17,6 +17,7 @@ const config: Config = {
         primary: {
           100: "#b7ab98",
           200: "#968c7e",
+          300: "rgba(150, 140, 126, 0.45)",
         },
         dark: {
           100: "#0a0a0a",

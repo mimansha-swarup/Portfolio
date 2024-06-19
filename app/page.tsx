@@ -5,6 +5,7 @@ import {
   ProjectSection,
   Skills,
 } from "@/components";
+import "../components/style.css"
 
 export default function Home() {
   return (

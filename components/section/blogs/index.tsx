@@ -7,12 +7,12 @@ import { blogList } from "@/constants/blogList";
 
 const Blogs = () => {
   return (
-    <section className="relative min-h-screen flex flex-col">
+    <section className="relative min-h-screen flex flex-col overflow-visible">
       <LightBall
         height="h-[150px] sm:h-[200px]"
         width="w-[150px] sm:w-[200px]"
-        blur="blur-[75px] sm:blur-[100px]"
-        positionClass="right-0 translate-y-[100%]"
+        blur="blur-[85px] sm:blur-[130px]"
+        positionClass="left-0"
       />
       <Title heading="Blogs" />
       <div className="flex gap-6 my-auto px-6 sm:px-12 flex-col md:flex-row  md:px-15">

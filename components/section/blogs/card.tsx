@@ -57,7 +57,7 @@ const Card = ({ data }: ICardProps) => {
           <polyline points="12 5 19 12 12 19"></polyline>
         </svg>
         <div>
-          <h4 className="text-2xl font-semibold transition-all group-hover:hidden ">
+          <h4 className=" text-lg sm:text-2xl font-semibold transition-all group-hover:hidden ">
             {data.title}
           </h4>
         </div>

@@ -1,11 +1,14 @@
 "use client";
+import { blogList } from "@/constants/blogList";
 import { animate, useMotionTemplate, useMotionValue } from "framer-motion";
 import React, { useEffect } from "react";
+
+type blogDataType = (typeof blogList)[0];
 interface ICardProps {
-  data: { imgSrc: string; title: string; url: string; id: string };
+  data: blogDataType;
 }
 
-const COLORS_TOP = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"];
+const COLORS_TOP = ["#B7AB98", "#968C7E", "rgba(150, 140, 126, 0.3)", "#8A89"];
 
 const Card = ({ data }: ICardProps) => {
   const color = useMotionValue(COLORS_TOP[0]);
@@ -36,10 +39,12 @@ const Card = ({ data }: ICardProps) => {
       ></div>
       <div
         className="p-4 relative z-20 h-full text-dark-500 bg-blog-card-gradient group-hover:text-white transition-colors duration-500 flex flex-col justify-between group-hover:bg-none"
-        // style={{
-        //   backgroundImage:
-        //     "radial-gradient(120% 120% at 0% 0%, transparent 50%, #b7ab98)",
-        // }}
+        style={
+          {
+            // backgroundImage,
+            // "radial-gradient(120% 120% at 0% 0%, transparent 50%, #b7ab98)", bg-blog-card-gradient
+          }
+        }
       >
         <svg
           stroke="currentColor"

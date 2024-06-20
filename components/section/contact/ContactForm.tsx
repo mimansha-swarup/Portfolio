@@ -4,6 +4,7 @@ import SpotlightButton from "@/components/shared/Button";
 import Input from "@/components/shared/Input";
 import Textarea from "@/components/shared/Textarea";
 import useWindowWidth from "@/hooks/useWIndowWidth";
+import { contactDetails } from "@/constants/nav";
 
 const INITIAL_FORM_FIELDS = {
   name: "",
@@ -32,7 +33,7 @@ const ContactForm = () => {
     };
   return (
     <div className="flex flex-col flex-[2_2_0%] sm:ml-9  mr-auto  sm:pr-[12%]  ">
-      <h3 className="text-primary-200 font-bold text-[1.75rem] text-right self-end">
+      <h3 className="text-primary-200 font-bold text-base scale-90 sm:scale-100 pr-[20px] sm:pr-0 md:text-[1.75rem] text-right self-end">
         Get in touch with me
       </h3>
 
@@ -53,7 +54,22 @@ const ContactForm = () => {
           onChange={onFieldChange("message")}
         />
       </div>
-      <SpotlightButton className="mt-auto ml-auto mb-3" label="Send" />
+      <div className="flex w-full mb-3 pt-3 px-[20px] ">
+        <div className="flex flex-col sm:flex-row items-center flex-wrap gap-6 md:gap-9 ">
+          {contactDetails?.map((contactObj) => (
+            <a
+              key={contactObj.href}
+              href={contactObj.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex text-lg text-white-700 "
+            >
+              <contactObj.icon />
+            </a>
+          ))}
+        </div>
+        <SpotlightButton className="mt-auto ml-auto" label="Send" />
+      </div>
     </div>
   );
 };

@@ -5,7 +5,10 @@ const headingTypography =
   "text-[1.5rem] tracking-[5px] sm:text-[3rem] sm:tracking-[10px] lg:text-[4rem] lg:tracking-[20px]  xl:tracking-[27px]";
 const HomeSection = () => {
   return (
-    <section className="relative min-h-screen flex flex-col justify-center items-center ">
+    <section
+      id="home"
+      className="relative min-h-screen flex flex-col justify-center items-center "
+    >
       <LightBall
         height="h-[300px] sm:h-[500px]"
         width="w-[300px] sm:w-[500px]"

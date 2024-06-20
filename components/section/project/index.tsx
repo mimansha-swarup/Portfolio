@@ -6,11 +6,11 @@ import "../../style.css";
 
 const ProjectSection = () => {
   return (
-    <section className="relative min-h-screen overflow-visible">
+    <section id="projects" className="relative min-h-screen overflow-visible">
       <LightBall
         height="h-[150px] sm:h-[200px]"
         width="w-[150px] sm:w-[200px]"
-        blur="blur-[75px] sm:blur-[130px]"
+        blur="blur-[100px] sm:blur-[130px]"
         positionClass="right-0"
       />
       <Title heading="Projects" />

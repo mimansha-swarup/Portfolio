@@ -2,7 +2,11 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
 
-const SpotlightButton = ({ label, className }: any) => {
+interface IButtonProps {
+  label: string;
+  className?: string;
+}
+const SpotlightButton = ({ label, className = "" }: IButtonProps) => {
   const btnRef = useRef<HTMLButtonElement>(null);
   const spanRef = useRef<HTMLElement>(null);
 

@@ -2,7 +2,6 @@
 import { skillList } from "@/constants/skills";
 import { motion } from "framer-motion";
 import React from "react";
-import { IconType } from "react-icons";
 
 interface ICardProps {
   title: string;
@@ -41,9 +40,11 @@ const Card = ({ title, index }: ICardProps) => {
         <h3 className="font-medium opacity-80 text-sm sm:text-lg mt-auto text-white-500 group-hover:text-white relative z-10 duration-300">
           {title}
         </h3>
-        <p className="title-underline  absolute bottom-0  text-lg">
-          ..................................
-        </p>
+        <div className="w-full overflow-hidden  absolute bottom-0 left-[50%] -translate-x-2/4 ">
+          <p className="title-underline text-lg">
+            ..................................
+          </p>
+        </div>
       </div>
     </motion.div>
   );

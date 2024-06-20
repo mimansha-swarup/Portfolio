@@ -6,7 +6,10 @@ import ContactForm from "./ContactForm";
 
 const Contact = () => {
   return (
-    <section className="relative flex flex-col min-h-screen overflow-visible">
+    <section
+      id="contact"
+      className="relative flex flex-col min-h-screen overflow-visible"
+    >
       <LightBall
         height="h-[300px] sm:h-[600px]"
         width="w-[300px] sm:w-[600px]"

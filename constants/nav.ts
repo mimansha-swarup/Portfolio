@@ -1,4 +1,5 @@
 import { FiLinkedin, FiTwitter, FiGithub } from "react-icons/fi";
+import { RiTwitterXLine } from "react-icons/ri";
 export const navLinks = [
   {
     label: "Home",
@@ -9,7 +10,7 @@ export const navLinks = [
     endpoint: "/project",
   },
   {
-    url:""
+    url: "",
   },
   {
     label: "Blogs",
@@ -26,7 +27,7 @@ export const contactDetails = [
     href: "https://www.linkedin.com/in/mimansha-swarup",
   },
   {
-    icon: FiTwitter,
+    icon: RiTwitterXLine,
     href: "https://twitter.com/SwarupMimansha",
   },
   {

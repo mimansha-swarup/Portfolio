@@ -7,11 +7,14 @@ import { blogList } from "@/constants/blogList";
 
 const Blogs = () => {
   return (
-    <section className="relative min-h-screen flex flex-col overflow-visible">
+    <section
+      id="blogs"
+      className="relative min-h-screen flex flex-col overflow-visible"
+    >
       <LightBall
         height="h-[150px] sm:h-[200px]"
         width="w-[150px] sm:w-[200px]"
-        blur="blur-[85px] sm:blur-[130px]"
+        blur="blur-[100px] sm:blur-[130px]"
         positionClass="left-0"
       />
       <Title heading="Blogs" />

@@ -1,12 +1,13 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
-// px-[2rem] sm:px-[10rem] md:px-[15rem] xl:px-[20rem]
+import { projects } from "@/constants/projectList";
+
 const CardWrapper = () => {
   return (
     <div className=" gap-[5rem] py-[5rem] flex flex-col ">
-      <ProjectCard initial={1000} animate={0} />
-      <ProjectCard initial={-1000} animate={0} />
-      <ProjectCard initial={-1000} animate={0} />
+      {projects?.map((project) => (
+        <ProjectCard key={project.id} data={project} />
+      ))}
     </div>
   );
 };

@@ -2,6 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { calculateNewHeight, generateRandomNumber } from "@/utils";
+import useWindowWidth from "@/hooks/useWIndowWidth";
 
 interface IProjectCardProps {
   initial: number;
@@ -10,6 +11,7 @@ interface IProjectCardProps {
 const ProjectCard = ({ initial, animate }: IProjectCardProps) => {
   const [height, setHeight] = useState("auto");
   const ref = useRef<HTMLDivElement>(null);
+  const windowWidth = useWindowWidth();
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["0 1", "1.33 1"],
@@ -20,7 +22,7 @@ const ProjectCard = ({ initial, animate }: IProjectCardProps) => {
   useEffect(() => {
     if (ref?.current?.offsetWidth)
       setHeight(calculateNewHeight(ref?.current?.offsetWidth));
-  }, [ref?.current?.offsetWidth]);
+  }, [ref?.current?.offsetWidth, windowWidth]);
 
   return (
     <div
@@ -30,7 +32,7 @@ const ProjectCard = ({ initial, animate }: IProjectCardProps) => {
     >
       <motion.div
         ref={ref}
-        className="relative w-full object-contain mx-auto   max-w-[75%] p-4 rounded-lg"
+        className="relative w-full object-contain mx-auto max-w-[90%]   sm:max-w-[75%] p-4 rounded-lg"
         style={{
           scale: scaleProgress,
           opacity: scrollYProgress,

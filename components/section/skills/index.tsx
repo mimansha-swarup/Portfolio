@@ -17,7 +17,7 @@ const Skills = () => {
       <Title heading="Skills" />
       {/* grid-rows-4 grid-flow-row*/}
       {/* grid  grid-cols-4 w-full auto-cols-max */}
-      <div className=" w-fit justify-center flex m-auto flex-wrap gap-8 ">
+      <div className=" w-fit justify-center flex m-auto flex-wrap gap-4 sm:gap-8 ">
         {skillList?.map((skill, index) => (
           <Card key={skill.id} index={index} title={skill.label} />
         ))}

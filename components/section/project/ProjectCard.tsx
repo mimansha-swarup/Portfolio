@@ -34,8 +34,9 @@ const ProjectCard = ({ data }: IProjectCardProps) => {
       }}
     >
       <motion.div
+        whileHover={{ rotate: "-1deg" }}
         ref={ref}
-        className="relative w-full object-contain mx-auto max-w-[90%]   sm:max-w-[75%] p-4 rounded-lg"
+        className="group relative cursor-pointer overflow-hidden w-full object-contain mx-auto max-w-[90%]   sm:max-w-[75%] p-4 rounded-xl"
         style={{
           scale: scaleProgress,
           opacity: scrollYProgress,
@@ -45,15 +46,26 @@ const ProjectCard = ({ data }: IProjectCardProps) => {
           backgroundPosition: "center center",
         }}
       >
-        <div className=" absolute top-0 bottom-0 left-0 right-0 bg-dark-500 opacity-80" />
-        <div className="absolute  bottom-0">
+        {/* <div className=" absolute top-0 bottom-0 left-0 right-0 bg-dark-500 opacity-80" /> */}
+        <div
+          // style={{ height }}
+          className="absolute h-[200px] bottom-0 top-[60%] md:top-[78%] left-4 right-4  bg-gradient-to-br from-primary-400 to-primary-700   rounded-t-2xl p-4 transition-transform duration-[250ms] group-hover:-translate-y-4 md:group-hover:-translate-y-8 group-hover:rotate-[2deg]"
+        >
+          <h2 className="pt-0 pb-0 md:pb-1 text-[1rem]  sm:text-[1.75rem] md:text-3xl">
+            {data.title}
+          </h2>
+          <p className="bottom-0 p-0 md:pb-3 text-[.65rem] sm:text-[1rem] text-gray-500">
+            {data.subTitle}
+          </p>
+        </div>
+        {/* <div className="absolute  bottom-0">
           <h2 className="pt-0 pb-1 text-[1rem]  sm:text-[1.75rem] md:text-3xl">
             {data.title}
           </h2>
           <p className="bottom-0 pb-3 text-[.65rem] sm:text-[1rem] text-gray-500">
             {data.subTitle}
           </p>
-        </div>
+        </div> */}
       </motion.div>
     </div>
   );

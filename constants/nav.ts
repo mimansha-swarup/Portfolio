@@ -2,23 +2,30 @@ import { FiLinkedin, FiTwitter, FiGithub } from "react-icons/fi";
 import { RiTwitterXLine } from "react-icons/ri";
 export const navLinks = [
   {
-    label: "Home",
-    endpoint: "/",
-  },
-  {
     label: "Projects",
     endpoint: "/project",
-  },
-  {
-    url: "",
+    id: "projects",
   },
   {
     label: "Blogs",
     endpoint: "/blogs",
+    id: "blogs",
+  },
+  {
+    // url: "",
+    id: "home",
   },
   {
     label: "Contact",
     endpoint: "/contact",
+    id: "contact",
+  },
+  {
+    label: "Cv",
+    
+    // endpoint: "/contact",
+    // id:"contact",
+    url: "",
   },
 ];
 export const contactDetails = [

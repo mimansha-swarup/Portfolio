@@ -19,15 +19,8 @@ const Contact = () => {
       <Title heading="Contact" />
 
       <div className="flex mt-auto   h-[100%]">
-        <div className="relative flex-1 hidden  md:block  max-w-[511px] max-h-[751px] object-contain">
-          <Image
-            src={"/assets/contact.svg"}
-            // height={511 / 2}
-            // width={751 / 2}
-            alt="contact image"
-            fill={true}
-            objectFit="object-contain"
-          />
+        <div className="relative flex-1  hidden  md:block  max-w-[511px] max-h-[751px] object-contain">
+          <Image src={"/assets/contact.svg"} alt="contact image" fill={true} />
         </div>
         <ContactForm />
       </div>

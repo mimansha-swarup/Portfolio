@@ -37,7 +37,7 @@ const ContactForm = () => {
         Get in touch with me
       </h3>
 
-      <div className="flex flex-col my-9  gap-9 pb-6 scale-90 sm:scale-100 ">
+      <div className="flex flex-col my-9  gap-9  md:gap-14 pb-6 scale-90 sm:scale-100 ">
         <Input
           label="Your alias"
           value={formFields.name}
@@ -54,7 +54,7 @@ const ContactForm = () => {
           onChange={onFieldChange("message")}
         />
       </div>
-      <div className="flex w-full mb-3 pt-3 px-[20px] ">
+      <div className="flex w-full mb-3 md:mb-6 pt-3 px-[20px] ">
         <div className="flex flex-col sm:flex-row items-center flex-wrap gap-6 md:gap-9 ">
           {contactDetails?.map((contactObj) => (
             <a

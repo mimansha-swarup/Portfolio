@@ -49,7 +49,11 @@ const ContactForm = ({
     Object.entries(formFields)?.forEach((entry) => {
       formData.append(entry[0], entry[1]);
     });
-    fetch(process.env.FORM_URL as string, { method: "POST", body: formData })
+  
+    fetch(process.env.NEXT_PUBLIC_FORM_URL as string, {
+      method: "POST",
+      body: formData,
+    })
       .then((res) => {
         pushNotification("Will be hearing from me soon", "success");
       })

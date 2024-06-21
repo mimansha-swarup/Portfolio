@@ -1,12 +1,13 @@
 "use client";
 import { motion } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { MouseEventHandler, useEffect, useRef } from "react";
 
 interface IButtonProps {
   label: string;
   className?: string;
+  onClick: MouseEventHandler<HTMLButtonElement>
 }
-const SpotlightButton = ({ label, className = "" }: IButtonProps) => {
+const SpotlightButton = ({ label, className = "", onClick }: IButtonProps) => {
   const btnRef = useRef<HTMLButtonElement>(null);
   const spanRef = useRef<HTMLElement>(null);
 
@@ -39,6 +40,7 @@ const SpotlightButton = ({ label, className = "" }: IButtonProps) => {
     <motion.button
       whileTap={{ scale: 0.985 }}
       ref={btnRef}
+      onClick={onClick}
       className={`btn relative w-full max-w-[8rem] overflow-hidden rounded-lg bg-transparent px-3 py-[0.5rem] text-primary-100 ${className}`}
     >
       <span className="pointer-events-none relative z-10 mix-blend-difference">

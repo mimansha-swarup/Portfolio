@@ -2,6 +2,7 @@ import React from "react";
 
 interface ITextareaProps {
   label: string;
+  name: string;
   value?: string | number | readonly string[];
   onChange?: React.ChangeEventHandler<HTMLTextAreaElement>;
   className?: string;
@@ -10,12 +11,14 @@ interface ITextareaProps {
 const Textarea = ({
   className = "",
   label,
+  name,
   value,
   onChange,
 }: ITextareaProps) => {
   return (
     <div className={`relative 12 w-full min-w-[200px]${className}`}>
       <textarea
+        name={name}
         value={value}
         onChange={onChange}
         rows={3}

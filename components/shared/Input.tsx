@@ -2,15 +2,26 @@ import React from "react";
 
 interface IInputProps {
   label: string;
+  name: string;
+  type?: string;
   value?: string | number | readonly string[];
   onChange?: React.ChangeEventHandler<HTMLInputElement>;
   className?: string;
 }
 
-const Input = ({ className = "", label, value, onChange }: IInputProps) => {
+const Input = ({
+  className = "",
+  label,
+  value,
+  onChange,
+  name,
+  type = "text",
+}: IInputProps) => {
   return (
     <div className={`relative h-11 w-full min-w-[200px]${className}`}>
       <input
+        name={name}
+        type={type}
         value={value}
         onChange={onChange}
         placeholder=" "

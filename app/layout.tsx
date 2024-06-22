@@ -11,6 +11,16 @@ const roboto = Roboto({
 
 export const metadata: Metadata = {
   title: "Mimansha Swarup's Portfolio",
+  openGraph: {
+    images: [
+      "https://cdn.hashnode.com/res/hashnode/image/upload/v1719068657166/cb177d4e-28a1-430b-b248-3b40cbbf4924.jpeg",
+    ],
+  },
+  twitter: {
+    images: [
+      "https://cdn.hashnode.com/res/hashnode/image/upload/v1719068657166/cb177d4e-28a1-430b-b248-3b40cbbf4924.jpeg",
+    ],
+  },
   description:
     "Explore the portfolio of an innovative Frontend Developer specializing in crafting visually stunning, user-friendly websites and applications. With expertise in HTML, CSS, JavaScript, and modern frameworks, this portfolio showcases a range of projects highlighting responsive design, intuitive interfaces, and seamless user experiences. Discover the skills and creativity that drive exceptional web development and elevate digital presence.",
 };

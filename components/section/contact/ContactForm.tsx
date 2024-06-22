@@ -18,6 +18,7 @@ const ContactForm = ({
   pushNotification: (text: string, type: notiType) => void;
 }) => {
   const [formFields, setFormField] = useState(INITIAL_FORM_FIELDS);
+  const [submitting, setSubmitting] = useState(false);
   const windowWidth = useWindowWidth();
 
   const textAreaLabel =
@@ -44,18 +45,21 @@ const ContactForm = ({
       pushNotification("Fields are empty", "error");
       return;
     }
+    setSubmitting(true);
     const formData = new FormData();
 
     Object.entries(formFields)?.forEach((entry) => {
       formData.append(entry[0], entry[1]);
     });
-  
+
     fetch(process.env.NEXT_PUBLIC_FORM_URL as string, {
       method: "POST",
       body: formData,
     })
       .then((res) => {
+        console.log("res", res);
         pushNotification("Will be hearing from me soon", "success");
+        setSubmitting(false);
       })
       .catch((err) => {
         pushNotification("mailto: mimanshaswarup@gmail.com", "error");
@@ -108,6 +112,7 @@ const ContactForm = ({
           onClick={submitForm}
           className="mt-auto ml-auto"
           label="Send"
+          loading={submitting}
         />
       </div>
     </form>

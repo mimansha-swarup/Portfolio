@@ -5,9 +5,15 @@ import { MouseEventHandler, useEffect, useRef } from "react";
 interface IButtonProps {
   label: string;
   className?: string;
-  onClick: MouseEventHandler<HTMLButtonElement>
+  loading?: boolean;
+  onClick: MouseEventHandler<HTMLButtonElement>;
 }
-const SpotlightButton = ({ label, className = "", onClick }: IButtonProps) => {
+const SpotlightButton = ({
+  label,
+  className = "",
+  onClick,
+  loading = false,
+}: IButtonProps) => {
   const btnRef = useRef<HTMLButtonElement>(null);
   const spanRef = useRef<HTMLElement>(null);
 
@@ -41,14 +47,15 @@ const SpotlightButton = ({ label, className = "", onClick }: IButtonProps) => {
       whileTap={{ scale: 0.985 }}
       ref={btnRef}
       onClick={onClick}
-      className={`btn relative w-full max-w-[8rem] overflow-hidden rounded-lg bg-transparent px-3 py-[0.5rem] text-primary-100 ${className}`}
+      disabled={loading}
+      className={`btn relative w-full max-w-[8rem] overflow-hidden rounded-lg bg-transparent px-3 py-[0.5rem] text-primary-100 disabled:bg-slate-900 disabled:cursor-not-allowed group  ${className}`}
     >
       <span className="pointer-events-none relative z-10 mix-blend-difference">
         {label}
       </span>
       <span
         ref={spanRef}
-        className="pointer-events-none absolute left-[50%] top-[50%] h-16 w-16 -translate-x-[50%] -translate-y-[50%] rounded-full bg-primary-200"
+        className="pointer-events-none group-disabled:bg-primary-400 absolute left-[50%] top-[50%] h-16 w-16 -translate-x-[50%] -translate-y-[50%] rounded-full bg-primary-200"
       />
     </motion.button>
   );

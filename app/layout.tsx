@@ -13,12 +13,12 @@ export const metadata: Metadata = {
   title: "Mimansha Swarup's Portfolio",
   openGraph: {
     images: [
-      "https://cdn.hashnode.com/res/hashnode/image/upload/v1719068657166/cb177d4e-28a1-430b-b248-3b40cbbf4924.jpeg",
+      "https://cdn.hashnode.com/res/hashnode/image/upload/v1719069772698/0472c3a7-fccb-4277-a51a-a8d2a3a4d1e2.jpeg",
     ],
   },
   twitter: {
     images: [
-      "https://cdn.hashnode.com/res/hashnode/image/upload/v1719068657166/cb177d4e-28a1-430b-b248-3b40cbbf4924.jpeg",
+      "https://cdn.hashnode.com/res/hashnode/image/upload/v1719069772698/0472c3a7-fccb-4277-a51a-a8d2a3a4d1e2.jpeg",
     ],
   },
   description:

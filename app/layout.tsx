@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     ],
   },
   description:
-    "Explore the portfolio of an innovative Frontend Developer specializing in crafting visually stunning, user-friendly websites and applications. With expertise in HTML, CSS, JavaScript, and modern frameworks, this portfolio showcases a range of projects highlighting responsive design, intuitive interfaces, and seamless user experiences. Discover the skills and creativity that drive exceptional web development and elevate digital presence.",
+    "Hey This is  Mimansha Swarup  Web developer with 2 years of experience specializing in crafting visually stunning, user-friendly websites and applications. With expertise in HTML, CSS, JavaScript,  React, NextJS and modern frameworks, you can check projects highlighting responsive design, intuitive interfaces, and seamless user experiences.",
 };
 
 export default function RootLayout({

@@ -56,10 +56,18 @@ const ProjectCard = ({ data }: IProjectCardProps) => {
               - {data.subTitle}
             </p>
             <div className="flex ml-auto gap-4 text-gray-500 text-[1rem] md:text-[1.25rem]">
-              <a href={data.githubLink} className="hover:text-white-500">
+              <a
+                href={data.githubLink}
+                target="_blank"
+                className="hover:text-white-500"
+              >
                 <TbCode />
               </a>
-              <a href={data.liveLink} className="hover:text-white-500">
+              <a
+                href={data.liveLink}
+                target="_blank"
+                className="hover:text-white-500"
+              >
                 <TbExternalLink />
               </a>
             </div>
@@ -68,14 +76,6 @@ const ProjectCard = ({ data }: IProjectCardProps) => {
             {data.shortDescription}
           </p>
         </div>
-        {/* <div className="absolute  bottom-0">
-          <h2 className="pt-0 pb-1 text-[1rem]  sm:text-[1.75rem] md:text-3xl">
-            {data.title}
-          </h2>
-          <p className="bottom-0 pb-3 text-[.65rem] sm:text-[1rem] text-gray-500">
-            {data.subTitle}
-          </p>
-        </div> */}
       </motion.div>
     </div>
   );

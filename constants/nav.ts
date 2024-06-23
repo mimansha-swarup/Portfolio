@@ -3,29 +3,28 @@ import { RiTwitterXLine } from "react-icons/ri";
 export const navLinks = [
   {
     label: "Projects",
-    endpoint: "/project",
     id: "projects",
+    url: "",
   },
   {
     label: "Blogs",
-    endpoint: "/blogs",
     id: "blogs",
+    url: "",
   },
   {
-    // url: "",
     id: "home",
+    label: "home",
+    url: "",
   },
   {
     label: "Contact",
-    endpoint: "/contact",
     id: "contact",
+    url: "",
   },
   {
     label: "Cv",
-    
-    // endpoint: "/contact",
-    // id:"contact",
-    url: "",
+    id: "cv",
+    url: "https://drive.google.com/file/d/1Cre73OD4V1UZnyzgng4NLCRB92E57IQL/view?usp=sharing",
   },
 ];
 export const contactDetails = [

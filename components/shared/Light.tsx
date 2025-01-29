@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
 
 interface LightBallProps {
   height: string;
@@ -6,6 +8,16 @@ interface LightBallProps {
   blur: string;
   positionClass?: string;
 }
+
+const motionProps = {
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+  },
+  transition: { duration: 2.5, ease: "easeOut" },
+};
 const LightBall = ({
   height,
   width,
@@ -13,9 +25,9 @@ const LightBall = ({
   positionClass = "",
 }: LightBallProps) => {
   return (
-    <div
-      // className={`absolute h-[${radius}] w-[${radius}] ${positionClass} blur-[${blur}] light-ball  `}
+    <motion.div
       className={`absolute ${height} ${width} ${blur}  ${positionClass} light-ball  `}
+      {...motionProps}
     />
   );
 };

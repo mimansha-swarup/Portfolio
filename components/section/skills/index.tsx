@@ -8,10 +8,10 @@ const Skills = () => {
   return (
     <section className="relative min-h-screen flex flex-col overflow-visible">
       <LightBall
-        height="h-[150px] sm:h-[200px]"
-        width="w-[150px] sm:w-[200px]"
-        blur="blur-[100px] sm:blur-[130px]"
-        positionClass="top-0 left-0"
+        height="h-[150px] sm:h-[200px] md:h-[400px]"
+        width="w-[150px] sm:w-[200px] md:w-[400px]"
+        blur="blur-[100px] sm:blur-[130px] md:blur-[250px]"
+        positionClass="-top-20 left-0"
       />
       <Title heading="Skills" />
 

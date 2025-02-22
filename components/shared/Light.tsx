@@ -13,9 +13,10 @@ const motionProps = {
   initial: {
     opacity: 0,
   },
-  animate: {
+  whileInView: {
     opacity: 1,
   },
+  viewport: { once: true },
   transition: { duration: 2.5, ease: "easeOut" },
 };
 const LightBall = ({

@@ -24,7 +24,7 @@ export const navLinks = [
   {
     label: "Cv",
     id: "cv",
-    url: "https://drive.google.com/file/d/1Cre73OD4V1UZnyzgng4NLCRB92E57IQL/view?usp=sharing",
+    url: "https://drive.google.com/file/d/1X-cqRa1d8sKBlN6zHk_eW376newybP6Z/view?usp=sharing",
   },
 ];
 export const contactDetails = [

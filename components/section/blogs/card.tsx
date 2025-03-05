@@ -36,23 +36,17 @@ const Card = ({ data }: ICardProps) => {
           backgroundSize: "cover",
           backgroundPosition: "center center",
         }}
-      ></div>
+      />
       <div
         className="p-4 relative z-20 h-full text-dark-500 bg-blog-card-gradient group-hover:text-white transition-colors duration-500 flex flex-col justify-between group-hover:bg-none"
-        style={
-          {
-            // backgroundImage,
-            // "radial-gradient(120% 120% at 0% 0%, transparent 50%, #b7ab98)", bg-blog-card-gradient
-          }
-        }
       >
         <svg
           stroke="currentColor"
           fill="none"
           stroke-width="2"
           viewBox="0 0 24 24"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
           className="text-3xl group-hover:-rotate-45 transition-transform duration-500 ml-auto"
           height="1em"
           width="1em"
